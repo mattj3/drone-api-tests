@@ -1,5 +1,7 @@
 # drone-api-tests
 
+![Drone API Tests](https://github.com/mattj3/drone-api-tests/actions/workflows/ci.yml/badge.svg)
+
 **Drone API Tests** is a lightweight FastAPI service that simulates basic drone telemetry endpoints. It’s built as a testing sandbox for QA engineers and developers to practice API automation by sending mock GPS data, appending flight logs, and resetting server state.
 
 This project is ideal for:
