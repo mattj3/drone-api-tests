@@ -23,7 +23,7 @@ async def test_get_flight_data():
         flight_id = post_response.json()["flight_id"]
 
         get_response = await ac.get(f"/flight/{flight_id}")
-        assert get_response.status_code == 200
+        assert get_response.status_code == 201
         flight_data = get_response.json()
         assert flight_data["flight_id"] == flight_id
         assert len(flight_data["data"]) == 1
