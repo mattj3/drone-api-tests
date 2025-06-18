@@ -36,7 +36,7 @@ drone-api-tests/
 │   └── test_unit_utils.py    # Unit tests for payload generators
 │
 ├── .gitignore
-├──  README.md
+├── README.md
 ├── requirements.txt         # Python dependencies
 └── utils.py                 # Helper functions for payload generation
 ```
@@ -81,4 +81,4 @@ pytest
 
 ## API Documentation
 
-Once the server is running, access the interactive API docs at: http://localhost:8000/docs
+Once the server is running, access the interactive API docs at: http://127.0.0.1:8000/docs
