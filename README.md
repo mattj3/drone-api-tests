@@ -1,6 +1,6 @@
 # drone-api-tests
 
-**Drone API Tests** is a lightweight FastAPI service that simulates basic drone telemetry endpoints. It’s built as a testing sandbox for QA engineers and developers to practice API automation—sending GPS data, appending flight logs, and resetting server state.
+**Drone API Tests** is a lightweight FastAPI service that simulates basic drone telemetry endpoints. It’s built as a testing sandbox for QA engineers and developers to practice API automation by sending mock GPS data, appending flight logs, and resetting server state.
 
 This project is ideal for:
 
@@ -10,8 +10,6 @@ This project is ideal for:
 
 Use it as a standalone mock backend or plug it into broader simulation test flows.
 
----
-
 ## Features
 
 - REST API endpoints to post and retrieve drone telemetry data
@@ -20,8 +18,6 @@ Use it as a standalone mock backend or plug it into broader simulation test flow
 - Reset endpoint to clear stored data
 - Fully async test suite using **pytest** and **httpx** for thorough validation
 - Payload generation utilities for both valid and invalid test scenarios
-
----
 
 ## File Structure
 
@@ -64,13 +60,13 @@ pip install -r requirements.txt
 uvicorn app.app:app --reload
 ```
 
-### 3. Start the FastAPI server
+The API will be running at: http://127.0.0.1:8000.
+
+### 4. Run tests (in another terminal)
 
 ```bash
-uvicorn app.app:app --reload
+pytest
 ```
-
-The API will be running at http://127.0.0.1:8000.
 
 ## API Endpoints
 
@@ -83,6 +79,4 @@ The API will be running at http://127.0.0.1:8000.
 
 ## API Documentation
 
-Once the server is running, access the interactive API docs at:
-
-http://localhost:8000/docs
+Once the server is running, access the interactive API docs at: http://localhost:8000/docs
