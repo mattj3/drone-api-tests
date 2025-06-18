@@ -25,15 +25,11 @@ jobs:
 
       - name: Run tests with report
         run: |
-          pytest --junitxml=results.xml --html=report.html --self-contained-html
+          pytest --junitxml=test-results.xml --maxfail=1 --disable-warnings -v
 
-      - name: Upload JUnit test report
-        uses: actions/upload-test-report@v1
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          path: results.xml
-
-      - name: Upload HTML test report
-        uses: actions/upload-artifact@v3
-        with:
-          name: html-test-report
-          path: report.html
+          name: junit-report
+          path: test-results.xml
