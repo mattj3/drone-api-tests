@@ -39,7 +39,7 @@ drone-api-tests/
 └── utils.py                 # Helper functions for payload generation
 ```
 
-## Setup & Usage
+## Setup and Run
 
 ### 1. Create and activate a virtual environment (optional but recommended)
 
