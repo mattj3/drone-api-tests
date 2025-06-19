@@ -39,6 +39,7 @@ mock-drone-api-testing/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt         # Python dependencies
+├── test_plan.md             # Project test plan
 └── utils.py                 # Helper functions for payload generation
 ```
 
