@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-This document defines the strategy for testing the Mock Drone API—an async FastAPI service simulating drone telemetry endpoints. Our goal is to ensure correctness of request handling, data storage, error paths, and utility functions.
+This document defines the strategy for testing the Mock Drone API, an async FastAPI service simulating drone telemetry endpoints. Our goal is to ensure correctness of request handling, data storage, error paths, and utility functions.
 
 ## 2. Scope
 
@@ -32,17 +32,18 @@ This document defines the strategy for testing the Mock Drone API—an async Fas
 - **httpx** – async HTTP client for exercising endpoints
 - **pytest‑asyncio** – async test support
 - **pytest‑html** (optional) – generate HTML test reports
+- **pytest-cov** - test coverage reporting
 
 ## 5. Environments
 
 - **Local** – FastAPI via Uvicorn/local mock data
-- **CI Pipeline** – GitHub Actions (runs `pytest --maxfail=1 --disable-warnings -q`)
+- **CI Pipeline** – GitHub Actions (runs `pytest --junitxml=test-results.xml --maxfail=1 --disable-warnings -v`)
 
 ## 6. Test Data
 
 - **Valid payloads**
   - GPS coordinates (lat, lon in correct ranges)
-  - Timestamps in ISO 8601
+  - Telemetry data (alt, speed, heading in correct ranges)
 - **Invalid payloads**
   - Missing fields (e.g. no `lat`)
   - Bad types (e.g. string instead of float)
