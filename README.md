@@ -6,7 +6,7 @@
 
 This project is ideal for:
 
-- Writing and validating API test cases with `pytest` and `requests`
+- Writing and validating API test cases with `pytest` and `httpx`
 - Testing edge cases like missing or malformed telemetry
 - Practicing CI/CD integration using GitHub Actions or other tools
 
@@ -24,7 +24,7 @@ Use it as a standalone mock backend or plug it into broader simulation test flow
 ## File Structure
 
 ```plaintext
-drone-api-tests/
+mock-drone-api-testing/
 ├── app/
 │   ├── __init__.py
 │   └── app.py              # FastAPI app with endpoints and data models

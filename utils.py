@@ -14,7 +14,7 @@ def generate_invalid_payloads():
         {
             "lat": "invalid_latitude",       # Should be a float
             "lon": None,                     # Missing value
-            "alt": "high",                  # Should be an integer
+            "alt": "high",                   # Should be an integer
             # Missing speed and heading
         },
         {
