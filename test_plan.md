@@ -62,7 +62,7 @@ This document defines the strategy for testing the Mock Drone API, an async Fast
 | `/telemetry/{flight_id}` | POST   | Valid append                  | 201 + updated telemetry           |
 |                          |        | Append to unknown `flight_id` | 404 Not Found                     |
 |                          |        | Malformed body                | 422                               |
-| `/reset`                 | DELETE | Always                        | 204 No Content (state cleared)    |
+| `/reset`                 | DELETE | Always                        | 200 + JSON `{"status": "reset"}`  |
 
 ## 8. Reporting & Metrics
 
