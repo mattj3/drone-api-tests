@@ -59,7 +59,7 @@ This document defines the strategy for testing the Mock Drone API, an async Fast
 |                          |        | Bad data types                | 422                               |
 | `/flight/{flight_id}`    | GET    | Existing flight               | 200 + telemetry array             |
 |                          |        | Unknown `flight_id`           | 404 Not Found                     |
-| `/telemetry/{flight_id}` | POST   | Valid append                  | 200 + updated telemetry           |
+| `/telemetry/{flight_id}` | POST   | Valid append                  | 201 + updated telemetry           |
 |                          |        | Append to unknown `flight_id` | 404 Not Found                     |
 |                          |        | Malformed body                | 422                               |
 | `/reset`                 | DELETE | Always                        | 204 No Content (state cleared)    |
