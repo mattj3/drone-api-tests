@@ -37,6 +37,7 @@ mock-drone-api-testing/
 │   └── test_unit_utils.py    # Unit tests for payload generators
 │
 ├── .gitignore
+├── pytest.ini
 ├── README.md
 ├── requirements.txt         # Python dependencies
 ├── test_plan.md             # Project test plan
