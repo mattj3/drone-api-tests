@@ -11,8 +11,6 @@ This project is ideal for:
 - Testing edge cases like missing or malformed telemetry
 - Practicing CI/CD integration using GitHub Actions or other tools
 
-Use it as a standalone mock backend or plug it into broader simulation test flows.
-
 ## Features
 
 - REST API endpoints to post and retrieve drone telemetry data
@@ -46,7 +44,7 @@ mock-drone-api-testing/
 
 ## Setup and Run
 
-### 1. Create and activate a virtual environment (optional but recommended)
+### 1. Create and activate a virtual environment
 
 ```bash
 python3 -m venv venv
